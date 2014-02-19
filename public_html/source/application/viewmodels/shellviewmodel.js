@@ -6,8 +6,10 @@ define(["jquery", "underscore", "backbone", "knockout", "knockback"],
             this.full_name = Knockout.computed(function () {
                 return this.first_name() + " " + this.last_name();
             }, this);
+            
+            Knockout.applyBindings(this);
         }
-
+        
         return ViewModel;
     }
 );

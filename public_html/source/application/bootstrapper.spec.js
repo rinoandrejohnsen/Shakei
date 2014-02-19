@@ -1,4 +1,10 @@
 define({
+    view: {
+        render: {
+            template: {module: 'text!source/application/views/shellview.html'}
+        },
+        insert: {at: 'dom.first!body'}
+    },
     text: {
         literal: {first_name: "Rino", last_name: "Johnsen"}
     },
@@ -18,12 +24,17 @@ define({
             ]
         }
     },
-    view: {
-        create: {
-            module: 'source/application/views/shellview',
-            args: [
-                {$ref: 'viewModel'}
-            ]
+    component: {
+        literal: {
+            receive: function (message) {
+                console.log('hello', message);
+            }
+        }
+    },
+    bus: {
+        channels: 'world',
+        subscribe: {
+            world: 'component.receive'
         }
     },
     plugins: [
@@ -35,7 +46,8 @@ define({
         {module: 'wire/dom'},
         {module: 'wire/dom/render'},
         {module: 'wire/connect'},
-        {module: 'wire/on'}
+        {module: 'wire/on'},
+        {module: 'msgs/wire'}
     ]
 });
 

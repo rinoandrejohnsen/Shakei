@@ -13,6 +13,7 @@
             {name: "knockback", location: "library/knockback", main: "knockback"},
             {name: "knockout", location: "library/knockout", main: "knockout"},
             {name: "meld", location: "library/meld", main: "meld"},
+            {name: "msgs", location: "library/msgs", main: "msgs"},
             {name: "when", location: "library/when", main: "when"},
             {name: "wire", location: "library/wire", main: "./wire"}
         ],

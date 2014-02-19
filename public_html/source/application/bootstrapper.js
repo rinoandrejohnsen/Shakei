@@ -4,6 +4,9 @@ define(["curl"],
             this.run = function () {
                 curl(['wire!./source/application/bootstrapper.spec'], function (context) {
                     console.log(context);
+                    
+                    context.bus.send('world', 'Rino');
+                    
                 });
             };
         }
