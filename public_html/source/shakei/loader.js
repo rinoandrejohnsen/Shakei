@@ -20,14 +20,14 @@
         locale: false
     };
 
-    curl(config, ["source/application/app"]).then(done, failure);
+    curl(config, ["source/shakei/application"]).then(done, failure);
 
-    function done (App) {
+    function done (Application) {
         console.log("Libraries loaded successfully");
         try {
             console.log("Creating application");
-            var app = new App();
-            app.onLaunch();
+            var application = new Application();
+            application.onLaunch();
 
             console.log("Application created successfully");
         }

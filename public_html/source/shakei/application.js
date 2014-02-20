@@ -1,22 +1,22 @@
 define(["./bootstrapper", "domReady!"],
     function (BootStrapper) {
 
-        function App () {
+        function Application () {
             var bootStrapper = new BootStrapper();
             bootStrapper.run();
         }
 
-        App.prototype.constructor = App;
-        App.prototype.onLaunch = function () {
+        Application.prototype.constructor = Application;
+        Application.prototype.onLaunch = function () {
             console.log("Launching");
         };
-        App.prototype.onSuspend = function () {
+        Application.prototype.onSuspend = function () {
             console.log("Suspending");
         };
-        App.prototype.onResume = function () {
+        Application.prototype.onResume = function () {
             console.log("Resuming");
         };
 
-        return App;
+        return Application;
     }
 );
