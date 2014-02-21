@@ -1,0 +1,22 @@
+<div data-bind="attr: { style: $root.CurrentColumnWidth }">
+    <table style="height: 100%; border-spacing: 0px;">
+        <tbody>
+            <tr>
+                <td style="background: #000; margin: 0px; padding: 0px;">
+                    <p style="font-family: Open Sans; color: white; font-size: 15px; font-weight: 400; margin-left: 59px; margin-bottom: 30px;">Shakei   中文</p>
+                    <div id="tabs" data-bind="foreach: tabs">    
+                        <div class="tab" data-bind="css: {selected: $parent.selectedTab() == id()}, text: name, click: $parent.selectedTab.bind($parent, id())"></div>
+                    </div> 
+                    <button data-bind="click: addSeat">Reserve another seat</button>
+                </td>
+                <td style="width: 100%; height: 100%;">
+                    <div id="tabContent" data-bind="foreach: tabs">
+                        <div data-bind="if: $parent.selectedTab() == id()">
+                            <span data-bind="html: text"></span>
+                        </div>
+                    </div> 
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

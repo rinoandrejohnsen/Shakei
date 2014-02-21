@@ -1,10 +1,11 @@
 html {
-    background: #f4f4f4;
+    background: #000;
+    color: #FFF;
     font-size: 100%;
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
 
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: aller_bold, arial, sans-serif;
     font-weight: lighter;
     color: #222;
 
@@ -28,9 +29,39 @@ body {
     margin: 0px;
 }
 
-.liveExample {
-    height: 700px;
-    background-color: #0072C6;
-    width: 30%;
+#tabs { 
+    padding: 0px 40px 0px 60px;
+    height: 100%;
+    display: table-cell;
+    vertical-align: middle;
+}
+.tab {  
+    display: inline-block;
+    padding: 4px 0;
+    font-family: aller_bold, arial, sans-serif;
+    font-size: 12px;
+    line-height: 12px;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #666;
+    -webkit-transition: color 0.15s linear;
+    -moz-transition: color 0.15s linear;
+    -o-transition: color 0.15s linear;
+    transition: color 0.15s linear;
+    width: 100%;
+}
+.tab.selected {
+    color: white;
+}
+.tab:hover {
+    color: white;
+}
+
+#tabContent {
+    text-align: center;
+    vertical-align: center;
+    border-top: none;
+    height: 100%;
 }
 
