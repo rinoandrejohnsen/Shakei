@@ -27,6 +27,11 @@ body {
     -moz-box-pack: center;
     flex-pack: center;
     margin: 0px;
+    transition: opacity 1s ease;
+-webkit-transition: opacity 1s ease;
+-moz-transition: opacity 1s ease;
+-o-transition: opacity 1s ease;
+-ms-transition: opacity 1s ease;
 }
 
 #tabs { 

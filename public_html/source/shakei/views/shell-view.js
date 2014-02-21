@@ -1,6 +1,6 @@
 define(["jquery", "underscore", "backbone", "knockout", "knockback", "text!source/shakei/views/shell-view.html"],
     function ($, _, Backbone, Knockout, Knockback, html) {
-        var View = Backbone.View.extend({
+        var ShellView = Backbone.View.extend({
             initialize: function (viewModel) {
                 this.$el = $("body");
                 this.template = html;
@@ -15,6 +15,6 @@ define(["jquery", "underscore", "backbone", "knockout", "knockback", "text!sourc
             }
         });
 
-        return View;
+        return ShellView;
     }
 );

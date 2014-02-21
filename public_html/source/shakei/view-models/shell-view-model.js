@@ -18,8 +18,10 @@ define(["jquery", "underscore", "backbone", "knockout", "knockback"],
          return ViewModel;
          }*/
 
-        function ViewModel () {
+        function ShellViewModel (menuService) {
             var self = this;
+            var menuItemCollection = menuService.getmenuItemCollection();
+            
             self.Tab = function (id, name, text, selected) {
                 var tab = this;
                 tab.id = Knockout.observable(id);
@@ -37,12 +39,19 @@ define(["jquery", "underscore", "backbone", "knockout", "knockback"],
             self.tabs.push(new self.Tab(3, 'Work', 'I\'m tab 3'));
             self.tabs.push(new self.Tab(4, 'News', 'Hello World!'));
             self.addSeat = function () {
-                self.tabs.push(new self.Tab(5, 'Rino', '<h3>Shakei</h3>'));
+                self.tabs.push(new self.Tab(6, 'Rino', '<h3>Shakei</h3>'));
             }
+
+            var postFeedItems = null;
+            var that = this;
+
+            menuItemCollection.collectionChanged.attach(function (item) {
+                self.tabs.push(new self.Tab(item.item.pos, item.item.name, item.item.content));
+            });
 
             return self;
         }
 
-        return ViewModel;
+        return ShellViewModel;
     }
 );

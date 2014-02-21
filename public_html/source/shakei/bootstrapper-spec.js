@@ -1,17 +1,33 @@
 define([], function () {
     var spec = {
         theme: {module: 'css!source/shakei/resources/styles/theme.css'},
-        viewModel: {
+        menuService: {
             create: {
-                module: 'source/shakei/view-models/shell-view-model'
+                module: 'source/shakei/services/menu-service'
             }
         },
-        view: {
+        shellViewModel: {
+            create: {
+                module: 'source/shakei/view-models/shell-view-model',
+                args: [
+                    {$ref: 'menuService'}
+                ]
+            }
+        },
+        shellView: {
             create: {
                 module: 'source/shakei/views/shell-view',
                 args: [
-                    {$ref: 'viewModel'}
+                    {$ref: 'shellViewModel'}
                 ]
+            }
+        },
+        contactModule: {
+            wire: {
+                spec: 'source/modules/contact-module/contact-module-spec',
+                provide: {
+                    mainRegion: {$ref: 'menuService'}
+                }
             }
         },
         component: {
