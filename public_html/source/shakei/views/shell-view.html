@@ -7,7 +7,7 @@
                     <div id="tabs" data-bind="foreach: tabs">    
                         <div class="tab" data-bind="css: {selected: $parent.selectedTab() == id()}, text: name, click: $parent.selectedTab.bind($parent, id())"></div>
                     </div> 
-                    <button data-bind="click: addSeat">Reserve another seat</button>
+                    <!--<button data-bind="click: addSeat">Reserve another seat</button>-->
                 </td>
                 <td style="width: 100%; height: 100%;">
                     <div id="tabContent" data-bind="foreach: tabs">
