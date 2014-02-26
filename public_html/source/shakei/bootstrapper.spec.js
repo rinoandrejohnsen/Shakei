@@ -3,12 +3,12 @@ define([], function () {
         theme: {module: 'css!source/shakei/resources/styles/theme.css'},
         menuService: {
             create: {
-                module: 'source/shakei/services/menu-service'
+                module: 'source/shakei/services/menuService'
             }
         },
         shellViewModel: {
             create: {
-                module: 'source/shakei/view-models/shell-view-model',
+                module: 'source/shakei/viewModels/shellViewModel',
                 args: [
                     {$ref: 'menuService'}
                 ]
@@ -16,15 +16,26 @@ define([], function () {
         },
         shellView: {
             create: {
-                module: 'source/shakei/views/shell-view',
+                module: 'source/shakei/views/shellView',
                 args: [
                     {$ref: 'shellViewModel'}
                 ]
+            },
+            init: {
+                render: ''
             }
         },
         contactModule: {
             wire: {
-                spec: 'source/modules/contact-module/contact-module-spec',
+                spec: 'source/modules/contactModule/contactModule.spec',
+                provide: {
+                    mainRegion: {$ref: 'menuService'}
+                }
+            }
+        },
+        highlightsModule: {
+            wire: {
+                spec: 'source/modules/highlightsModule/highlightsModule.spec',
                 provide: {
                     mainRegion: {$ref: 'menuService'}
                 }

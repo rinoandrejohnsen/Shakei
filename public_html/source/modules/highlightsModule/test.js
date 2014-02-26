@@ -1,8 +1,8 @@
 define([],
     function () {
         
-        function Test (menuService) {
-            menuService.addMenuItem({pos:5, name:'Contact', content:'Hello World!'});
+        function Test (menuService, testView) {
+            menuService.addMenuItem({pos:1, name:'Highlights', content: testView});
             
             return this;
         }

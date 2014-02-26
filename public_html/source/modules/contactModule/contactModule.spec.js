@@ -1,10 +1,16 @@
 define([], function () {
     var ContactModuleSpec = {
+        testView: {
+            create: {
+                module: 'source/modules/contactModule/testView'
+            }
+        },
         component: {
             create: {
-                module: 'source/modules/contact-module/test',
+                module: 'source/modules/contactModule/test',
                 args: [
-                    {$ref: 'menuService'}
+                    {$ref: 'menuService'},
+                    {$ref: 'testView'}
                 ]
             }
         },

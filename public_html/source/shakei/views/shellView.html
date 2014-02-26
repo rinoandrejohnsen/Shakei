@@ -11,8 +11,10 @@
                 </td>
                 <td style="width: 100%; height: 100%;">
                     <div id="tabContent" data-bind="foreach: tabs">
-                        <div data-bind="if: $parent.selectedTab() == id()">
-                            <span data-bind="html: text"></span>
+                        <div  data-bind="if: $parent.selectedTab() == id()">
+                            <div data-bind="attr: { 'id': id }">
+                                <span data-bind="template: { afterRender: myPostProcessingLogic }"></span>
+                            </div>
                         </div>
                     </div> 
                 </td>
