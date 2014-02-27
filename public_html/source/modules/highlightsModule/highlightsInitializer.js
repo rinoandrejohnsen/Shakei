@@ -1,21 +1,21 @@
 define(["source/common/infrastructure/models/menuItem"],
     function (MenuItem) {
         
-        function Test (menuService, testView) {
+        function HighlightsInitializer (menuService, highlightsView) {
+            var self = this;
+            
             var menuItem = new MenuItem({
                 position: 1,
                 name: "Highlights",
-                view: testView
+                view: highlightsView
             });
             
             menuService.addMenuItem(menuItem);
             
-            return this;
+            return self;
         }
 
-        Test.prototype.constructor = Test;
-
-        return Test;
+        return HighlightsInitializer;
     }
 );
 

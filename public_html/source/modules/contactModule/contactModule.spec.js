@@ -1,16 +1,24 @@
 define([], function () {
     var ContactModuleSpec = {
-        testView: {
+        contactViewModel: {
             create: {
-                module: 'source/modules/contactModule/testView'
+                module: 'source/modules/contactModule/viewModels/contactViewModel'
+            }
+        },     
+        contactView: {
+            create: {
+                module: 'source/modules/contactModule/views/contactView',
+                args: [
+                    {$ref: 'contactViewModel'}
+                ]
             }
         },
-        component: {
+        contactInitializer: {
             create: {
-                module: 'source/modules/contactModule/test',
+                module: 'source/modules/contactModule/contactInitializer',
                 args: [
                     {$ref: 'menuService'},
-                    {$ref: 'testView'}
+                    {$ref: 'contactView'}
                 ]
             }
         },

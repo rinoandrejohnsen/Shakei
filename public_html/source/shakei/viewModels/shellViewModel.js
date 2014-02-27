@@ -29,7 +29,6 @@ define(["jquery", "underscore", "backbone", "knockout", "knockback"],
                 self.tabs.sort(function (left, right) {
                     return left.id() === right.id() ? 0 : (left.id() < right.id() ? -1 : 1);
                 });
-                //self.tabs.valueHasMutated();
             });
 
             return self;

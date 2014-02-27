@@ -1,9 +1,9 @@
 define([], function () {
     var spec = {
         theme: {module: 'css!source/shakei/resources/styles/theme.css'},
-        isMenuItem: {
+        menuItemValidator: {
             create: {
-                module: 'source/common/infrastructure/validators/isMenuItem'
+                module: 'source/common/infrastructure/instruments/validators/MenuItemValidator'
             }
         },
         menuService: {
@@ -11,7 +11,7 @@ define([], function () {
                 module: 'source/shakei/services/menuService'
             },
             before: {
-                addMenuItem: 'isMenuItem.check'
+                addMenuItem: 'menuItemValidator.check'
             }
         },
         shellViewModel: {

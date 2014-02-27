@@ -1,16 +1,24 @@
 define([], function () {
     var HighlightsModuleSpec = {
-        testView: {
+        highlightsViewModel: {
             create: {
-                module: 'source/modules/highlightsModule/testView'
+                module: 'source/modules/highlightsModule/viewModels/highlightsViewModel'
             }
         },
-        component: {
+        highlightsView: {
             create: {
-                module: 'source/modules/highlightsModule/test',
+                module: 'source/modules/highlightsModule/views/highlightsView',
+                args: [
+                    {$ref: 'highlightsViewModel'}
+                ]
+            }
+        },
+        highlightsInitializer: {
+            create: {
+                module: 'source/modules/highlightsModule/highlightsInitializer',
                 args: [
                     {$ref: 'menuService'},
-                    {$ref: 'testView'}
+                    {$ref: 'highlightsView'}
                 ]
             }
         },
