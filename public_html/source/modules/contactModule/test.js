@@ -1,9 +1,15 @@
-define([],
-    function () {
-        
+define(["source/common/infrastructure/models/menuItem"],
+    function (MenuItem) {
+
         function Test (menuService, testView) {
-            menuService.addMenuItem({pos:2, name:'Contact', content: testView});
+            var menuItem = new MenuItem({
+                position: 2,
+                name: "Contact",
+                view: testView
+            });
             
+            menuService.addMenuItem(menuItem);
+
             return this;
         }
 

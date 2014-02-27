@@ -6,7 +6,7 @@ define(['source/common/infrastructure/event'], function(Event) {
 
         this.add = function(item) {
             items.push(item);
-            this.collectionChanged.notify({item: item});
+            this.collectionChanged.notify(item);
         };
 
         this.get = function() {
@@ -18,7 +18,7 @@ define(['source/common/infrastructure/event'], function(Event) {
 
             item = items[index];
             items.splice(index, 1);
-            this.collectionChanged.notify({item: item});
+            this.collectionChanged.notify(item);
         };
     };
 

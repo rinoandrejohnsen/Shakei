@@ -1,9 +1,17 @@
 define([], function () {
     var spec = {
         theme: {module: 'css!source/shakei/resources/styles/theme.css'},
+        isMenuItem: {
+            create: {
+                module: 'source/common/infrastructure/validators/isMenuItem'
+            }
+        },
         menuService: {
             create: {
                 module: 'source/shakei/services/menuService'
+            },
+            before: {
+                addMenuItem: 'isMenuItem.check'
             }
         },
         shellViewModel: {

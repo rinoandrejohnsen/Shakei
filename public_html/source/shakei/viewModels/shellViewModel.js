@@ -24,8 +24,8 @@ define(["jquery", "underscore", "backbone", "knockout", "knockback"],
                 return "width: 100%; height: 700px; background: #111;";
             }, self);
 
-            menuItemCollection.collectionChanged.attach(function (item) {
-                self.tabs.push(new self.Tab(item.item.pos, item.item.name, item.item.content));
+            menuItemCollection.collectionChanged.attach(function (menuItem) {
+                self.tabs.push(new self.Tab(menuItem.get("position"), menuItem.get("name"), menuItem.get("view")));
                 self.tabs.sort(function (left, right) {
                     return left.id() === right.id() ? 0 : (left.id() < right.id() ? -1 : 1);
                 });
