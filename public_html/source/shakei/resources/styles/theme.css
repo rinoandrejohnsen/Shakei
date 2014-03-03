@@ -65,5 +65,6 @@ body {
     text-align: center;
     border-top: none;
     height: 100%;
+    max-height: 700px;
 }
 

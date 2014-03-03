@@ -1,8 +1,17 @@
 define([], function () {
     var HighlightsModuleSpec = {
+        styles: {module: 'css!source/modules/highlightsModule/resources/styles/books.css'},
+        highlightsService: {
+            create: {
+                module: 'source/modules/highlightsModule/services/highlightsService'
+            }
+        },
         highlightsViewModel: {
             create: {
-                module: 'source/modules/highlightsModule/viewModels/highlightsViewModel'
+                module: 'source/modules/highlightsModule/viewModels/highlightsViewModel',
+                args: [
+                    {$ref: 'highlightsService'}
+                ]
             }
         },
         highlightsView: {

@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<catalog>
+    <book id="book001">
+        <author>Bjarke Ingels</author>
+        <title>Yes is More</title>
+        <genre>Computer</genre>
+        <price>44.95</price>
+        <publish_date>7 Nov 2009</publish_date>
+        <image>./source/modules/highlightsModule/data/images/yesismore.jpg</image>
+        <description>Yes is more is the title of an exhibition and a book presenting B.I.G. in solo format for the first time in Denmark at the Danish architecture centre. Unlike a classic architectural monograph, this book is more of a popular cultural manifesto, which is also literally the first actual documentation of B.I.G.'s trailblazing practice. As the book demonstrates, this is a practice where method, processes, instruments and the approach to the concept of architecture is precisely as wild, unfettered and result-producing as the world it is part of and greets with an unqualified Yes. Bjarke Ingels attracts highly talented co-workers, but also gifted and ambitious clients from all over the world. He does so because his own talent is above all to swiftly create intelligent synergies out of indomitable "movements", wild energies and unforeseen dynamics and transform them into hitherto unseen, surprising, functional, valuable and beautiful solutions to the specific and complex challenges in each task. The results of B.I.G.'s practice has already won awards from the Royal Academy of Fine Arts, the Special Jury Prize at the Venice Architecture Biennale, the prize for "The World's Best Housing Project", "Best Building in the Nordic Countries" as well as many other international kudos. The project and the title Yes is more is a double-edged wordplay on the dogma in modern architecture that "less is more". Less is only more as far as dimensions go - the ability to encompass as many dimensions as possible (more) with as few expenses as possible (less). As a design parameter for an aesthetic retro minimalism this only amounts to idiosyncratic architectural idiocy.</description>
+    </book>
+    <book id="book002">
+        <author>Friedrich Nietzsche</author>
+        <title>Beyond Good and Evil</title>
+        <genre>Computer</genre>
+        <price>39.95</price>
+        <publish_date>7 Nov 2009</publish_date>
+        <image>./source/modules/highlightsModule/data/images/beyondgoodandevil.jpg</image>
+        <description>Friedrich Nietzsche's Beyond Good and Evil is translated from the German by R.J. Hollingdale with an introduction by Michael Tanner in Penguin Classics. Beyond Good and Evil confirmed Nietzsche's position as the towering European philosopher of his age. The work dramatically rejects the tradition of Western thought with its notions of truth and God, good and evil. Nietzsche demonstrates that the Christian world is steeped in a false piety and infected with a 'slave morality'. With wit and energy, he turns from this critique to a philosophy that celebrates the present and demands that the individual imposes their own 'will to power' upon the world. This edition includes a commentary on the text by the translator and Michael Tanner's introduction, which explains some of the more abstract passages in Beyond Good and Evil. Frederich Nietzsche (1844-1900) became the chair of classical philology at Basel University at the age of 24 until his bad health forced him to retire in 1879. He divorced himself from society until his final collapse in 1899 when he became insane. A powerfully original thinker, Nietzsche's influence on subsequent writers, such as George Bernard Shaw, D.H. Lawrence, Thomas Mann and Jean-Paul Sartre, was considerable.</description>
+    </book>
+    <book id="book003">
+        <author>Plato</author>
+        <title>The Republic</title>
+        <genre>Computer</genre>
+        <price>39.95</price>
+        <publish_date>4 Feb 2005</publish_date>
+        <image>./source/modules/highlightsModule/data/images/beyondgoodandevil.jpg</image>
+        <description></description>
+    </book>
+    <book id="book003">
+        <author>Plato</author>
+        <title>The Republic</title>
+        <genre>Computer</genre>
+        <price>49.95</price>
+        <publish_date>31 May 2007</publish_date>
+        <image>./source/modules/highlightsModule/data/images/beyondgoodandevil.jpg</image>
+        <description>One of the greatest works of philosophy and political theory ever produced, Plato's The Republic has shaped western thought for thousands of years, remaining as relevant today as when it was first written in the Ancient Greece. This Penguin Classics edition is translated by Desmond lee with a new introduction by Melissa Lane.
+
+            Plato's Republic is widely acknowledged as the cornerstone of Western philosophy. Presented in the form of a dialogue between Socrates and three different interlocutors, it is an enquiry into the notion of a perfect community and the ideal individual within it. During the conversation other questions are raised: what is goodness; what is reality; what is knowledge? The Republic also addresses the purpose of education and the role of both women and men as 'guardians' of the people. With remarkable lucidity and deft use of allegory, Plato arrives at a depiction of a state bound by harmony and ruled by 'philosopher kings'.
+
+            Desmond Lee's translation of The Republic has come to be regarded as a classic in its own right. His introduction discusses contextual themes such as </description>
+    </book>
+    <book id="book004">
+        <author>Benjamin Franklin</author>
+        <title>The Autobiography</title>
+        <genre>Computer</genre>
+        <price>9.95</price>
+        <publish_date>31 May 2007</publish_date>
+        <image>./source/modules/highlightsModule/data/images/beyondgoodandevil.jpg</image>
+        <description>One of the most popular works of American literature, this charming self-portrait has been translated into nearly every language. It covers Franklin's life up to his prewar stay in London as representative of the Pennsylvania Assembly, including his boyhood years, work as a printer, experiments with electricity, political career, much more.</description>
+    </book>
+</catalog>
