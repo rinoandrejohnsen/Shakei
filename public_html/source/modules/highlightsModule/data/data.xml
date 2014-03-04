@@ -12,7 +12,7 @@
     <book id="book002">
         <author>Friedrich Nietzsche</author>
         <title>Beyond Good and Evil</title>
-        <genre>Computer</genre>
+        <genre>Philosophy</genre>
         <price>39.95</price>
         <publish_date>7 Nov 2009</publish_date>
         <image>./source/modules/highlightsModule/data/images/beyondgoodandevil.jpg</image>
@@ -21,19 +21,10 @@
     <book id="book003">
         <author>Plato</author>
         <title>The Republic</title>
-        <genre>Computer</genre>
-        <price>39.95</price>
-        <publish_date>4 Feb 2005</publish_date>
-        <image>./source/modules/highlightsModule/data/images/beyondgoodandevil.jpg</image>
-        <description></description>
-    </book>
-    <book id="book003">
-        <author>Plato</author>
-        <title>The Republic</title>
-        <genre>Computer</genre>
+        <genre>Philosophy</genre>
         <price>49.95</price>
         <publish_date>31 May 2007</publish_date>
-        <image>./source/modules/highlightsModule/data/images/beyondgoodandevil.jpg</image>
+        <image>./source/modules/highlightsModule/data/images/plato.jpg</image>
         <description>One of the greatest works of philosophy and political theory ever produced, Plato's The Republic has shaped western thought for thousands of years, remaining as relevant today as when it was first written in the Ancient Greece. This Penguin Classics edition is translated by Desmond lee with a new introduction by Melissa Lane.
 
             Plato's Republic is widely acknowledged as the cornerstone of Western philosophy. Presented in the form of a dialogue between Socrates and three different interlocutors, it is an enquiry into the notion of a perfect community and the ideal individual within it. During the conversation other questions are raised: what is goodness; what is reality; what is knowledge? The Republic also addresses the purpose of education and the role of both women and men as 'guardians' of the people. With remarkable lucidity and deft use of allegory, Plato arrives at a depiction of a state bound by harmony and ruled by 'philosopher kings'.
@@ -43,10 +34,46 @@
     <book id="book004">
         <author>Benjamin Franklin</author>
         <title>The Autobiography</title>
-        <genre>Computer</genre>
+        <genre>Philosophy</genre>
         <price>9.95</price>
         <publish_date>31 May 2007</publish_date>
-        <image>./source/modules/highlightsModule/data/images/beyondgoodandevil.jpg</image>
+        <image>./source/modules/highlightsModule/data/images/benjamin.jpg</image>
         <description>One of the most popular works of American literature, this charming self-portrait has been translated into nearly every language. It covers Franklin's life up to his prewar stay in London as representative of the Pennsylvania Assembly, including his boyhood years, work as a printer, experiments with electricity, political career, much more.</description>
+    </book>
+    <book id="book005">
+        <author>Benjamin Hoff</author>
+        <title>Tao of Pooh</title>
+        <genre>Lifestyle</genre>
+        <price>3.95</price>
+        <publish_date>1 Nov 1994</publish_date>
+        <image>./source/modules/highlightsModule/data/images/pooh.jpg</image>
+        <description>Explains Taoism by the way Winnie-the-Pooh lives by its principles, and the Taoist principle of Te, the Way of the Small, through Piglet...</description>
+    </book>
+    <book id="book006">
+        <author>David Hill</author>
+        <title>Developer's Guide to Microsoft Prism 4</title>
+        <genre>Computer</genre>
+        <price>17.39</price>
+        <publish_date>21 Mar 2007</publish_date>
+        <image>./source/modules/highlightsModule/data/images/prism.png</image>
+        <description>This guide provides everything you need to get started with Prism and to use it to create flexible, maintainable Windows® Presentation Foundation (WPF) and Microsoft Silverlight® 4.0 applications. It can be challenging to design and build WPF or Silverlight client applications that are flexible, maintainable, and that can evolve over time based on changing requirements. These kinds of applications require a loosely coupled modular architecture that allows individual parts of the application to be independently developed and tested, allowing the application to be modified or extended later on. Additionally, the architecture should promote testability, code re-use, and flexibility.</description>
+    </book>
+        <book id="book007">
+        <author>Dino Esposito</author>
+        <title>Architecting Applications for the Enterprise</title>
+        <genre>Computer</genre>
+        <price>7.95</price>
+        <publish_date>26 Nov 2009</publish_date>
+        <image>./source/modules/highlightsModule/data/images/arch.jpg</image>
+        <description>Make the right architectural decisions up front—and improve the quality and reliability of your results. Led by two enterprise programming experts, you’ll learn how to apply the patterns and techniques that help control project complexity—and make systems easier to build, support, and upgrade—right from the start.</description>
+    </book>
+    <book id="book008">
+        <author>Grigori Melnik</author>
+        <title>Dependency Injection with Unity</title>
+        <genre>Computer</genre>
+        <price>3.95</price>
+        <publish_date>19 Aug 2013</publish_date>
+        <image>./source/modules/highlightsModule/data/images/unity.jpg</image>
+        <description>Explains Taoism by the way Winnie-the-Pooh lives by its principles, and the Taoist principle of Te, the Way of the Small, through Piglet...</description>
     </book>
 </catalog>

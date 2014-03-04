@@ -21,7 +21,7 @@ define(["jquery", "underscore", "backbone", "knockout", "knockback"],
             };
             self.selectedTab = Knockout.observable(1);
             self.CurrentColumnWidth = Knockout.computed(function () {
-                return "width: 100%; height: 700px; background: #000;";
+                return "width: 2000px; height: 700px; background: #000; overflow-x: visible;";
             }, self);
 
             menuItemCollection.collectionChanged.attach(function (menuItem) {

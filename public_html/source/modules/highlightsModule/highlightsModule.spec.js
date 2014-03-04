@@ -1,4 +1,4 @@
-define([], function () {
+define(['msgs/channels/pubsub'], function () {
     var HighlightsModuleSpec = {
         styles: {module: 'css!source/modules/highlightsModule/resources/styles/books.css'},
         highlightsService: {
@@ -10,7 +10,8 @@ define([], function () {
             create: {
                 module: 'source/modules/highlightsModule/viewModels/highlightsViewModel',
                 args: [
-                    {$ref: 'highlightsService'}
+                    {$ref: 'highlightsService'},
+                    {$ref: 'bus'}
                 ]
             }
         },
@@ -19,6 +20,25 @@ define([], function () {
                 module: 'source/modules/highlightsModule/views/highlightsView',
                 args: [
                     {$ref: 'highlightsViewModel'}
+                ]
+            },
+            after: {
+                render: "viewerView.render"
+            }
+        },
+        viewerViewModel: {
+            create: {
+                module: 'source/modules/highlightsModule/viewModels/viewerViewModel',
+                args: [
+                    {$ref: 'bus'}
+                ]
+            }
+        },
+        viewerView: {
+            create: {
+                module: 'source/modules/highlightsModule/views/viewerView',
+                args: [
+                    {$ref: 'viewerViewModel'}
                 ]
             }
         },
@@ -30,6 +50,26 @@ define([], function () {
                     {$ref: 'highlightsView'}
                 ]
             }
+        },
+        component: {
+            literal: {
+                receive: function (message) {
+                    console.log('hello', message);
+                }
+            }
+        },
+        component: {
+            literal: {
+                receive: function (message) {
+                    console.log('hello', message);
+                }
+            }
+        },
+        bus: {
+            channels: {
+                pubsubChannel: 'world'
+            },
+            
         },
         plugins: [
             {module: 'wire/aop'},
@@ -47,6 +87,5 @@ define([], function () {
             {module: 'msgs/wire'}
         ]
     };
-
     return HighlightsModuleSpec;
 });

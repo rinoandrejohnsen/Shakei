@@ -21,13 +21,13 @@
     -ms-filter: grayscale(100%); 
     -o-filter: grayscale(100%);
     filter: gray; /* IE6+ */
-    transition: 1s;
-    opacity: 0.3;
+    transition: 0.5s;
+    opacity: 0.4;
 }
 
 .book img:hover {
     filter: none;
     -webkit-filter: grayscale(0);
-    transition: 1s;
+    transition: 0.5s;
     opacity: 1;
 }

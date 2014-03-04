@@ -25,10 +25,6 @@ define([], function () {
         plugins: [
             {module: 'wire/aop'},
             {
-                module: 'wire/debug',
-                trace: {pointcut: /^((?!(model$|constructor$|_)).*)$/}
-            },
-            {
                 module: 'wire/dom',
                 classes: {init: 'loading'}
             },

@@ -1,3 +1,4 @@
 define({
-    highlightsViewId: "highlightsView"
+    highlightsViewId: "highlightsView",
+    viewerViewId: "viewerView"
 });

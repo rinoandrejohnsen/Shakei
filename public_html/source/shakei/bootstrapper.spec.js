@@ -49,25 +49,8 @@ define([], function () {
                 }
             }
         },
-        component: {
-            literal: {
-                receive: function (message) {
-                    console.log('hello', message);
-                }
-            }
-        },
-        bus: {
-            channels: 'world',
-            subscribe: {
-                world: 'component.receive'
-            }
-        },
         plugins: [
             {module: 'wire/aop'},
-            {
-                module: 'wire/debug',
-                trace: {pointcut: /^((?!(model$|constructor$|_)).*)$/}
-            },
             {
                 module: 'wire/dom',
                 classes: {init: 'loading'}

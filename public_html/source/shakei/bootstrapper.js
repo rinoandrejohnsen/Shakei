@@ -5,8 +5,6 @@ define(["curl"],
                 Curl(['wire!./source/shakei/bootstrapper.spec'], function (context) {
                     console.log(context);
                     
-                    context.bus.send('world', 'Rino');
-                    
                 });
             };
         }
