@@ -1,10 +1,15 @@
 define(["jquery", "underscore", "backbone", "knockout", "text!source/shakei/views/shellView.html"],
-    function ($, _, Backbone, Knockout, html) {
+    function ($, _, Backbone, Knockout, Html) {
+        
+        if (typeof (Html) === "undefined" || !Html) {
+            throw new Error("The dependency 'Html' is not loaded correctly");
+        }
+
         var ShellView = Backbone.View.extend({
-            initialize: function (viewModel) {
+            initialize: function (shellViewModel) {
                 this.$el = $("body");
-                this.template = html;                
-                this.viewModel = viewModel;
+                this.template = Html;                
+                this.viewModel = shellViewModel;
             },
             render: function () {
                 this.$el.html(this.template);

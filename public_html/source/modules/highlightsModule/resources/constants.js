@@ -1,4 +1,5 @@
 define({
     highlightsViewId: "highlightsView",
-    viewerViewId: "viewerView"
+    viewerViewId: "viewerView",
+    channelId: "highlightsChannel"
 });

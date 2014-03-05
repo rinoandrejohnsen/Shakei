@@ -1,26 +1,37 @@
-define(['source/common/infrastructure/event'], function(Event) {
-    function ObservableCollection() {
-        var items = [];
+define(['source/common/infrastructure/event'],
+    function (Event) {
 
-        this.collectionChanged = new Event(this);
+        if (typeof (Event) === "undefined" || !Event) {
+            throw new Error("The dependency 'Event' is not loaded correctly");
+        }
 
-        this.add = function(item) {
-            items.push(item);
-            this.collectionChanged.notify(item);
-        };
+        function ObservableCollection () {
+            var self = this;
+            var items = [];
 
-        this.get = function() {
-            return [].concat(items);
-        };
+            self.collectionChanged = new Event(this);
 
-        this.remove = function(index) {
-            var item;
+            self.add = function (item) {
+                items.push(item);
+                this.collectionChanged.notify(item);
+            };
 
-            item = items[index];
-            items.splice(index, 1);
-            this.collectionChanged.notify(item);
-        };
-    };
+            self.get = function () {
+                return [].concat(items);
+            };
 
-    return ObservableCollection;
-});
+            self.remove = function (index) {
+                var item;
+
+                item = items[index];
+                items.splice(index, 1);
+                this.collectionChanged.notify(item);
+            };
+
+            return self;
+        }
+
+
+        return ObservableCollection;
+    }
+);

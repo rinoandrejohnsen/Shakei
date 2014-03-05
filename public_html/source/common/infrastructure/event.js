@@ -1,20 +1,26 @@
-define(function() {
-    function Event(sender) {
-        var sender = sender;
-        var listeners = [];
+define([],
+    function () {
 
-        this.attach = function(listener) {
-            listeners.push(listener);
-        };
+        function Event (sender) {
+            var self = this;
+            var sender = sender;
+            var listeners = [];
 
-        this.notify = function(args) {
-            var index;
+            self.attach = function (listener) {
+                listeners.push(listener);
+            };
 
-            for (index = 0; index < listeners.length; index += 1) {
-                listeners[index](args);
-            }
-        };
-    };
-    
-    return Event;
-});
+            self.notify = function (args) {
+                var index;
+
+                for (index = 0; index < listeners.length; index += 1) {
+                    listeners[index](args);
+                }
+            };
+
+            return self;
+        }
+
+        return Event;
+    }
+);

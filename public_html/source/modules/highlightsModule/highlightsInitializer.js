@@ -1,6 +1,10 @@
 define(["source/common/infrastructure/models/menuItem"],
     function (MenuItem) {
         
+        if (typeof (MenuItem) === "undefined" || !MenuItem) {
+            throw new Error("The dependency 'MenuItem' is not loaded correctly");
+        }
+        
         function HighlightsInitializer (menuService, highlightsView) {
             var self = this;
             

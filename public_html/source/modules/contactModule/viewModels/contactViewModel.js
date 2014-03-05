@@ -1,10 +1,10 @@
 define(["jquery", "underscore", "backbone", "knockout", "knockback"],
     function ($, _, Backbone, Knockout, Knockback) {
-
+ 
         function ContactViewModel () {
             var self = this;
 
-            self.text2 = Knockout.observable("Hello World! - from a contactModule!");
+            self.text = Knockout.observable("Hello World! - from a contactModule!");
 
             return self;
         }

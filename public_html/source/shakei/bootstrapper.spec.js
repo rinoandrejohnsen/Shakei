@@ -1,9 +1,17 @@
 define([], function () {
     var spec = {
         theme: {module: 'css!source/shakei/resources/styles/theme.css'},
+        logger: {
+            create: {
+                module: 'source/common/infrastructure/instruments/loggers/consoleLogger'
+            }
+        },
         menuItemValidator: {
             create: {
-                module: 'source/common/infrastructure/instruments/validators/MenuItemValidator'
+                module: 'source/common/infrastructure/instruments/validators/MenuItemValidator',
+                args: [
+                    {$ref: 'logger'}
+                ]
             }
         },
         menuService: {
@@ -37,7 +45,7 @@ define([], function () {
             wire: {
                 spec: 'source/modules/contactModule/contactModule.spec',
                 provide: {
-                    mainRegion: {$ref: 'menuService'}
+                    menuService: {$ref: 'menuService'}
                 }
             }
         },
@@ -45,7 +53,7 @@ define([], function () {
             wire: {
                 spec: 'source/modules/highlightsModule/highlightsModule.spec',
                 provide: {
-                    mainRegion: {$ref: 'menuService'}
+                    menuService: {$ref: 'menuService'}
                 }
             }
         },

@@ -1,21 +1,21 @@
-define(["./bootstrapper", "domReady!"],
-    function (BootStrapper) {
-
-        function Application () {
-            var bootStrapper = new BootStrapper();
-            bootStrapper.run();
+define(["./bootstrapper"],
+    function (Bootstrapper) {
+        
+        if (typeof (Bootstrapper) === "undefined" || !Bootstrapper) {
+            throw new Error("The dependency 'Bootstrapper' is not loaded correctly");
         }
-
-        Application.prototype.constructor = Application;
-        Application.prototype.onLaunch = function () {
-            console.log("Launching");
-        };
-        Application.prototype.onSuspend = function () {
-            console.log("Suspending");
-        };
-        Application.prototype.onResume = function () {
-            console.log("Resuming");
-        };
+        
+        function Application () {
+            var self = this;
+            
+            var bootstrapper = new Bootstrapper();
+            
+            self.run = function () {
+                bootstrapper.run();
+            };
+            
+            return self;
+        }
 
         return Application;
     }

@@ -23,13 +23,9 @@
     curl(config, ["source/shakei/application"]).then(done, failure);
 
     function done (Application) {
-        console.log("Libraries loaded successfully");
         try {
-            console.log("Creating application");
             var application = new Application();
-            application.onLaunch();
-
-            console.log("Application created successfully");
+            application.run();
         }
         catch (error) {
             failure(error);

@@ -1,15 +1,18 @@
 define(["curl"],
     function (Curl) {
+        
         function Bootstrapper () {
-            this.run = function () {
+            var self = this;
+            
+            self.run = function () {
                 Curl(['wire!./source/shakei/bootstrapper.spec'], function (context) {
-                    console.log(context);
-                    
+                    // post actions
+                    console.log(context);                   
                 });
             };
+            
+            return self;
         }
-
-        Bootstrapper.prototype.constructor = Bootstrapper;
 
         return Bootstrapper;
     }

@@ -1,3 +1,7 @@
-<div data-bind="attr: { style: $root.CurrentColumnWidth }">
-    <label>Rino</label>
+<div data-bind="attr: { style: $root.style }">
+    <button data-bind="click: closeButtonHandler">Close</button>
+    <div style="margin-left: 50px;" data-bind="with: book">
+        <h3 style="font-family: Open Sans;font-weight: 300;font-size: 25px;" data-bind="text: title"></h3>
+        <img height="600px" data-bind="attr:{src: image}" /> 
+    </div>
 </div>
